@@ -1,3 +1,5 @@
+package Model;
+
 public class MoralesMastercard {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
