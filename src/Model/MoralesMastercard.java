@@ -1,9 +1,12 @@
-<<<<<<< HEAD
+package Model;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
 import Model.Info;
 import Model.Interfaz;
+import java.util.Map;
+import java.util.HashMap;
 
 public class MoralesMastercard implements Interfaz {
     private Map<String, Double> cardDatabase; // Simulación de una base de datos de tarjetas
@@ -62,23 +65,16 @@ public class MoralesMastercard implements Interfaz {
 
     }
 
-    private boolean isValidCard(String cardNumber) {
-        // Realizar validación de la tarjeta, por ejemplo, longitud y formato
+        private boolean isValidCard(String cardNumber) {
+            // Realizar validación de la tarjeta, por ejemplo, longitud y formato
 
-        // En este ejemplo, se valida que la tarjeta tenga 16 dígitos y que sean todos
-        // números
-        return cardNumber.length() == 16 && cardNumber.matches("[0-9]+");
-    }
+            // En este ejemplo, se valida que la tarjeta tenga 16 dígitos y que sean todos
+            // números
+            return cardNumber.length() == 16 && cardNumber.matches("[0-9]+");
+        }
 
-    private boolean isValidCvv(int cvv) {
-        // Realizar validación del código CVV, por ejemplo, longitud
-        return cvv >= 100 && cvv <= 999;
-=======
-package Model;
-
-public class MoralesMastercard {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
->>>>>>> 0ee1bc51bb4f784b943e727b5702ac6af5fe2d4c
-    }
-}
+        private boolean isValidCvv(int cvv) {
+            // Realizar validación del código CVV, por ejemplo, longitud
+            return cvv >= 100 && cvv <= 999;
+        }
+    } // <-- Added missing closing brace for the MoralesMastercard class
