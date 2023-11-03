@@ -1,4 +1,4 @@
-package Model;
+package Controller;
 
 public class CifradoEmperador {
     public static String cifrar(String mensaje, int desplazamiento) {
@@ -20,7 +20,7 @@ public class CifradoEmperador {
         return cifrar(mensajeCifrado, 10 - desplazamiento);
     }
 
-    public static void main(String[] args) {
+    public  void runCifrado() {
         String mensajeOriginal = "12345, 6789, 9876";
         int desplazamiento = 3;
 

@@ -3,9 +3,10 @@ package Model;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import Model.Info;
-import Model.Interfaz;
 import java.util.Map;
+
+import Controller.CifradoEmperador;
+
 import java.util.HashMap;
 
 public class MoralesMastercard implements Interfaz {
