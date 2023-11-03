@@ -6,4 +6,4 @@ public class App {
         System.out.println("Hello, World!");
     }
 }
-/* hola */
+/* hola hola */
