@@ -9,10 +9,10 @@ import Controller.CifradoEmperador;
 
 import java.util.HashMap;
 
-public class MoralesMastercard implements Interfaz {
+public class Mastercard implements Interfaz {
     private Map<String, Double> cardDatabase; // Simulación de una base de datos de tarjetas
 
-    public MoralesMastercard() {
+    public Mastercard() {
         cardDatabase = new HashMap<>();
         // Agregar tarjetas a la base de datos para pruebas (en un sistema real, esta
         // información se almacenaría de manera segura)
@@ -20,7 +20,7 @@ public class MoralesMastercard implements Interfaz {
         cardDatabase.put("9876543210987654", 750.50);
     }
 
-    public void processPayment(Info paymentInfo) {
+    public void processPayment(UserInfo paymentInfo) {
         // Validar la tarjeta, monto y otros detalles de pago
         String cardNumber = paymentInfo.getCardNumber();
         int cvv = paymentInfo.getCvv();

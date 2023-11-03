@@ -1,14 +1,28 @@
 package Model;
 
-public class Info {
+public class UserInfo {
     private String user;
     private int id;
     private String publicKey;
     private double amount;
-    private int installments;
+    private int cuotas;
     private String cardNumber;
     private int expirationDate;
     private int cvv;
+
+
+    public UserInfo(String user, int id, String publicKey, double amount, int cuotas, String cardNumber, int expirationDate, int cvv) {
+        this.user = user;
+        this.id = id;
+        this.publicKey = publicKey;
+        this.amount = amount;
+        this.cuotas = cuotas;
+        this.cardNumber = cardNumber;
+        this.expirationDate = expirationDate;
+        this.cvv = cvv;
+    }
+
+
 
     public String getUser() {
         return user;
@@ -42,12 +56,12 @@ public class Info {
         this.amount = amount;
     }
 
-    public int getInstallments() {
-        return installments;
+    public int getCuotas() {
+        return cuotas;
     }
 
-    public void setInstallments(int installments) {
-        this.installments = installments;
+    public void setCuotas(int installments) {
+        this.cuotas = installments;
     }
 
     public String getCardNumber() {
