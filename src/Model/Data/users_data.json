@@ -1,0 +1,154 @@
+{
+    "transacciones": [
+      {
+        "usuario": "juan.perez",
+        "id": 12345,
+        "public_key": "abcd1234efgh5678",
+        "monto": 100.00,
+        "cuotas": 12,
+        "numero_de_tarjeta": 4111111111111111,
+        "fecha_de_vencimiento": 1223,
+        "codigo_CVV": 123
+      },
+      {
+        "usuario": "ana.gomez",
+        "id": 12346,
+        "public_key": "abcd1234efgh5679",
+        "monto": 200.00,
+        "cuotas": 6,
+        "numero_de_tarjeta": 3111111111111111,
+        "fecha_de_vencimiento": 1224,
+        "codigo_CVV": 124
+      },
+      {
+        "usuario": "carlos.lopez",
+        "id": 12347,
+        "public_key": "abcd1234efgh5680",
+        "monto": 300.00,
+        "cuotas": 24,
+        "numero_de_tarjeta": 4111111111111122,
+        "fecha_de_vencimiento": 1225,
+        "codigo_CVV": 125
+      },
+      {
+        "usuario": "diana.rodriguez",
+        "id": 12348,
+        "public_key": "abcd1234efgh5681",
+        "monto": 400.00,
+        "cuotas": 3,
+        "numero_de_tarjeta": 5111111111111122,
+        "fecha_de_vencimiento": 1226,
+        "codigo_CVV": 126
+      },
+      {
+        "usuario": "eduardo.gutierrez",
+        "id": 12349,
+        "public_key": "abcd1234efgh5682",
+        "monto": 500.00,
+        "cuotas": 12,
+        "numero_de_tarjeta": 4111111111111133,
+        "fecha_de_vencimiento": 1227,
+        "codigo_CVV": 127
+      },
+      {
+        "usuario": "fernanda.martinez",
+        "id": 12350,
+        "public_key": "abcd1234efgh5683",
+        "monto": 600.00,
+        "cuotas": 6,
+        "numero_de_tarjeta": 5111111111111133,
+        "fecha_de_vencimiento": 1228,
+        "codigo_CVV": 128
+      },
+      {
+        "usuario": "gabriel.hernandez",
+        "id": 12351,
+        "public_key": "abcd1234efgh5684",
+        "monto": 700.00,
+        "cuotas": 24,
+        "numero_de_tarjeta": 3111111111111144,
+        "fecha_de_vencimiento": 1229,
+        "codigo_CVV": 129
+      },
+      {
+        "usuario": "hector.jimenez",
+        "id": 12352,
+        "public_key": "abcd1234efgh5685",
+        "monto": 800.00,
+        "cuotas": 3,
+        "numero_de_tarjeta": 5111111111111144,
+        "fecha_de_vencimiento": 1230,
+        "codigo_CVV": 130
+      },
+      {
+        "usuario": "irene.ramirez",
+        "id": 12353,
+        "public_key": "abcd1234efgh5686",
+        "monto": 900.00,
+        "cuotas": 12,
+        "numero_de_tarjeta": 4111111111111155,
+        "fecha_de_vencimiento": 1231,
+        "codigo_CVV": 131
+      },
+      {
+        "usuario": "jorge.garcia",
+        "id": 12354,
+        "public_key": "abcd1234efgh5687",
+        "monto": 1000.00,
+        "cuotas": 6,
+        "numero_de_tarjeta": 5111111111111155,
+        "fecha_de_vencimiento": 1232,
+        "codigo_CVV": 132
+      },
+      {
+        "usuario": "karla.morales",
+        "id": 12355,
+        "public_key": "abcd1234efgh5688",
+        "monto": 1100.00,
+        "cuotas": 24,
+        "numero_de_tarjeta": 4111111111111166,
+        "fecha_de_vencimiento": 1233,
+        "codigo_CVV": 133
+      },
+      {
+        "usuario": "luis.perez",
+        "id": 12356,
+        "public_key": "abcd1234efgh5689",
+        "monto": 1200.00,
+        "cuotas": 3,
+        "numero_de_tarjeta": 5111111111111166,
+        "fecha_de_vencimiento": 1234,
+        "codigo_CVV": 134
+      },
+      {
+        "usuario": "maria.gonzalez",
+        "id": 12357,
+        "public_key": "abcd1234efgh5690",
+        "monto": 1300.00,
+        "cuotas": 12,
+        "numero_de_tarjeta": 4111111111111177,
+        "fecha_de_vencimiento": 1235,
+        "codigo_CVV": 135
+      },
+      {
+        "usuario": "natalia.lopez",
+        "id": 12358,
+        "public_key": "abcd1234efgh5691",
+        "monto": 1400.00,
+        "cuotas": 6,
+        "numero_de_tarjeta": 5111111111111177,
+        "fecha_de_vencimiento": 1236,
+        "codigo_CVV": 136
+      },
+      {
+        "usuario": "oscar.martinez",
+        "id": 12359,
+        "public_key": "abcd1234efgh5692",
+        "monto": 1500.00,
+        "cuotas": 24,
+        "numero_de_tarjeta": 3111111111111188,
+        "fecha_de_vencimiento": 1237,
+        "codigo_CVV": 137
+      }
+    ]
+  }
