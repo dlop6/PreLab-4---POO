@@ -2,6 +2,6 @@ package Model;
 
 
 public interface Interfaz {
-    void processPayment(PaymentInfo paymentInfo);
+    void processPayment(Info paymentInfo);
     void generateOutputFile(String filename);
 }

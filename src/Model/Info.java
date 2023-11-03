@@ -1,6 +1,6 @@
 package Model;
 
-public class PaymentInfo {
+public class Info {
     private String user;
     private int id;
     private String publicKey;
