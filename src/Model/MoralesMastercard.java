@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -72,5 +73,12 @@ public class MoralesMastercard implements Interfaz {
     private boolean isValidCvv(int cvv) {
         // Realizar validación del código CVV, por ejemplo, longitud
         return cvv >= 100 && cvv <= 999;
+=======
+package Model;
+
+public class MoralesMastercard {
+    public static void main(String[] args) throws Exception {
+        System.out.println("Hello, World!");
+>>>>>>> 0ee1bc51bb4f784b943e727b5702ac6af5fe2d4c
     }
 }
