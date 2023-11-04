@@ -1,10 +1,7 @@
 package Test;
-
 import Model.UserInfo;
 import Controller.CardType;
-import org.mockito.Mockito;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -26,7 +23,7 @@ public class CardTypeTest {
 
         ArrayList<UserInfo> users = new ArrayList<>(Arrays.asList(user1, user2, user3));
 
-        CardType cardType = new CardType();
+        CardType cardType = new CardType(); // Assuming default constructor
 
         // Act
         cardType.cardType(users);
