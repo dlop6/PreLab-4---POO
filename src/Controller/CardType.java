@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import Model.*;
 
+
 public class CardType{
 
     public void cardType(ArrayList<UserInfo> users){
