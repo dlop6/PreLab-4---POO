@@ -6,7 +6,7 @@ import Model.*;
 
 public class CardType{
 
-    public static void cardType(ArrayList<UserInfo> users){
+    public void cardType(ArrayList<UserInfo> users){
         Visa visa = new Visa();
         Mastercard mastercard = new Mastercard();
         American american = new American();
@@ -40,7 +40,7 @@ public class CardType{
         visa.generateOutputFile("visa.txt");
         mastercard.generateOutputFile("mastercard.txt");
         american.generateOutputFile("american.txt");
-        
+
 
     }
 }

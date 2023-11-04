@@ -2,7 +2,7 @@ package Model;
 
 public class UserInfo {
     private String user;
-    private int id;
+    private long id;
     private String publicKey;
     private double amount;
     private int cuotas;
@@ -11,7 +11,7 @@ public class UserInfo {
     private int cvv;
 
 
-    public UserInfo(String user, int id, String publicKey, double amount, int cuotas, String cardNumber, int expirationDate, int cvv) {
+    public UserInfo(String user, long id, String publicKey, double amount, int cuotas, String cardNumber, int expirationDate, int cvv) {
         this.user = user;
         this.id = id;
         this.publicKey = publicKey;
@@ -32,11 +32,11 @@ public class UserInfo {
         this.user = user;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

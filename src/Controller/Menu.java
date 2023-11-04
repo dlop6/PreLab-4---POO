@@ -1,6 +1,9 @@
 package Controller;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import Model.UserInfo;
 
 public class Menu {
     public static void menu() {
@@ -9,6 +12,9 @@ public class Menu {
         Scanner sc = new Scanner(System.in);
         String archivo = sc.nextLine();
         ReadFiles readFiles = new ReadFiles();
-        readFiles.readJSON(archivo);
+        ArrayList<UserInfo> usuarios = readFiles.readJSON(archivo);
+        CardType cardType = new CardType();
+        cardType.cardType(usuarios);
+        sc.close();
     }
 }
