@@ -40,8 +40,8 @@ public class CardType{
         visa.generateOutputFile("visa.txt");
         mastercard.generateOutputFile("mastercard.txt");
         american.generateOutputFile("american.txt");
-
-
     }
+
+    
 }
 
