@@ -1,13 +1,21 @@
 package Model;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 import Controller.CifradoEmperador;
 import java.util.HashMap;
 
+/**
+ * Clase que implementa la interfaz para procesar pagos con tarjeta Mastercard.
+ */
 public class Mastercard implements Interfaz {
     private Map<String, Double> cardDatabase; // Simulación de una base de datos de tarjetas
 
+    /**
+     * Constructor de la clase Mastercard.
+     * Se inicializa una base de datos simulada con tarjetas y montos para pruebas.
+     */
     public Mastercard() {
         cardDatabase = new HashMap<>();
         // Agregar tarjetas a la base de datos para pruebas (en un sistema real, esta
@@ -16,6 +24,11 @@ public class Mastercard implements Interfaz {
         cardDatabase.put("9876543210987654", 750.50);
     }
 
+    /**
+     * Procesa el pago mediante tarjeta Mastercard.
+     *
+     * @param paymentInfo Información del pago a procesar.
+     */
     public void processPayment(UserInfo paymentInfo) {
         // Validar la tarjeta, monto y otros detalles de pago
         String cardNumber = paymentInfo.getCardNumber();
@@ -28,14 +41,14 @@ public class Mastercard implements Interfaz {
             if (cardDatabase.containsKey(cardNumber) && cardDatabase.get(cardNumber) >= amount) {
                 cardDatabase.put(cardNumber, cardDatabase.get(cardNumber) - amount);
 
-                // Cifrar el número de tarjeta utilizando CifradoNumerico
+                // Cifrar el número de tarjeta utilizando CifradoEmperador
                 int desplazamiento = 3;
                 String encryptedCardNumber = CifradoEmperador.cifrar(cardNumber, desplazamiento);
 
                 // Devolver la respuesta, puedes incluir el número de tarjeta cifrado en la
                 // respuesta
                 System.out.println("Pago procesado.");
-                System.out.println("Numero de tarjeta encriptado: " + encryptedCardNumber);
+                System.out.println("Número de tarjeta encriptado: " + encryptedCardNumber);
             } else {
                 System.out.println("Tarjeta rechazada.");
             }
@@ -44,6 +57,11 @@ public class Mastercard implements Interfaz {
         }
     }
 
+    /**
+     * Genera un archivo de salida.
+     *
+     * @param filename Nombre del archivo de salida.
+     */
     public void generateOutputFile(String filename) {
         // Implementa la generación del archivo de salida según tus requisitos
 
@@ -59,19 +77,18 @@ public class Mastercard implements Interfaz {
         } catch (IOException e) {
             System.out.println("Error al generar el archivo de salida.");
         }
-
     }
 
-        private boolean isValidCard(String cardNumber) {
-            // Realizar validación de la tarjeta, por ejemplo, longitud y formato
+    private boolean isValidCard(String cardNumber) {
+        // Realizar validación de la tarjeta, por ejemplo, longitud y formato
 
-            // En este ejemplo, se valida que la tarjeta tenga 16 dígitos y que sean todos
-            // números
-            return cardNumber.length() == 16 && cardNumber.matches("[0-9]+");
-        }
-
-        private boolean isValidCvv(int cvv) {
-            // Realizar validación del código CVV, por ejemplo, longitud
-            return cvv >= 100 && cvv <= 999;
-        }
+        // En este ejemplo, se valida que la tarjeta tenga 16 dígitos y que sean todos
+        // números
+        return cardNumber.length() == 16 && cardNumber.matches("[0-9]+");
     }
+
+    private boolean isValidCvv(int cvv) {
+        // Realizar validación del código CVV, por ejemplo, longitud
+        return cvv >= 100 && cvv <= 999;
+    }
+}

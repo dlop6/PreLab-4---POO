@@ -23,7 +23,7 @@ public class CardTypeTest {
 
         ArrayList<UserInfo> users = new ArrayList<>(Arrays.asList(user1, user2, user3));
 
-        CardType cardType = new CardType(); // Assuming default constructor
+        CardType cardType = new CardType();
 
         // Act
         cardType.cardType(users);
