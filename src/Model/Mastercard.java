@@ -1,12 +1,8 @@
 package Model;
-
 import java.io.FileWriter;
 import java.io.IOException;
-
 import java.util.Map;
-
 import Controller.CifradoEmperador;
-
 import java.util.HashMap;
 
 public class Mastercard implements Interfaz {
@@ -78,4 +74,4 @@ public class Mastercard implements Interfaz {
             // Realizar validación del código CVV, por ejemplo, longitud
             return cvv >= 100 && cvv <= 999;
         }
-    } // <-- Added missing closing brace for the MoralesMastercard class
+    }

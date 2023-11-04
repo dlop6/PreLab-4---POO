@@ -1,8 +1,8 @@
 package Controller;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Model.PaymentGateway;
 import Model.UserInfo;
 
 public class Menu {
@@ -12,8 +12,16 @@ public class Menu {
         Scanner sc = new Scanner(System.in);
         String archivo = sc.nextLine();
         ReadFiles readFiles = new ReadFiles();
-        ArrayList<UserInfo> usuarios = readFiles.readJSON(archivo);
-        CardType cardType = new CardType();
+        ArrayList<UserInfo> usuarios = ReadFiles.readJSON(archivo);
+        PaymentGateway paymentGateway = new PaymentGateway() {
+            @Override
+            public void createPayment() {
+                // Default implementation for createPayment
+                System.out.println("Default Payment Gateway implementation");
+            }
+        };
+
+        CardType cardType = new CardType(paymentGateway); // Provide PaymentGateway instance
         cardType.cardType(usuarios);
         sc.close();
     }

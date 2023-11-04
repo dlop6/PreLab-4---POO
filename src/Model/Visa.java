@@ -4,32 +4,27 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Visa implements Interfaz {
-
-    public interface PaymentGateway {
-    void createPayment();
-}
-
-    private PaymentGateway paymentGateway;
     private UserInfo paymentInfo;
+    private PaymentGateway paymentGateway;
 
-    public Visa(PaymentGateway paymentGateway) {
+    public Visa(PaymentGateway paymentGateway, UserInfo paymentInfo) {
         this.paymentGateway = paymentGateway;
         this.paymentInfo = paymentInfo;
     }
 
     @Override
     public void processPayment(UserInfo paymentInfo) {
-        // Validar la tarjeta, monto y otros detalles de pago
+        // Validating the card number and amount
         String cardNumber = paymentInfo.getCardNumber();
         double amount = paymentInfo.getAmount();
 
         if (isValidCard(cardNumber) && amount > 0) {
-            // Calcular comisión y IVA
-            double comision = amount * 0.05;
-            double ivaComision = comision * 0.12;
-            double total = amount + comision - ivaComision;
+            // Commission and IVA calculation
+            double commission = amount * 0.05;
+            double ivaCommission = commission * 0.12;
+            double total = amount + commission - ivaCommission;
 
-            // Formatear la respuesta como XML
+            // Creating the XML content
             String xmlContent = "<PaymentInfo>\n" +
                     "\t<User>" + paymentInfo.getUser() + "</User>\n" +
                     "\t<Id>" + paymentInfo.getId() + "</Id>\n" +
@@ -41,45 +36,30 @@ public class Visa implements Interfaz {
                     "\t<CVV>" + paymentInfo.getCvv() + "</CVV>\n" +
                     "</PaymentInfo>";
 
-            // Guardar el archivo XML
+            // Generating and saving the XML file
             String fileName = "visa_payment.xml";
             try {
                 FileWriter fileWriter = new FileWriter(fileName);
                 fileWriter.write(xmlContent);
                 fileWriter.close();
             } catch (IOException e) {
-                System.out.println("Error al guardar el archivo XML.");
+                System.out.println("Error saving the Visa XML file.");
             }
 
-            // Enviar a la pasarela de pago
+            // Initiating payment through the gateway
             paymentGateway.createPayment();
         } else {
-            System.out.println("Tarjeta rechazada.");
+            System.out.println("Rejected Card.");
         }
-    }
-
-    private boolean isValidCard(String cardNumber) {
-        // Realizar validación de la tarjeta, por ejemplo, longitud y formato
-        return cardNumber.length() == 16 && cardNumber.startsWith("4");
     }
 
     @Override
-    public void generateOutputFile(String fileName) {
-        // Implementation for generateOutputFile goes here
-        try {
-            FileWriter fileWriter = new FileWriter(fileName);
-            fileWriter.write("Información de pago Visa\n");
-            fileWriter.write("Usuario: " + paymentInfo.getUser() + "\n");
-            fileWriter.write("ID: " + paymentInfo.getId() + "\n");
-            fileWriter.write("Monto: " + paymentInfo.getAmount() + "\n");
-            fileWriter.write("Cuotas: " + paymentInfo.getCuotas() + "\n");
-            fileWriter.write("Número de Tarjeta: " + paymentInfo.getCardNumber() + "\n");
-            fileWriter.write("Fecha de Vencimiento: " + paymentInfo.getExpirationDate() + "\n");
-            fileWriter.write("CVV: " + paymentInfo.getCvv() + "\n");
-            fileWriter.close();
-            System.out.println("Archivo para Visa generado exitosamente.");
-        } catch (IOException e) {
-            System.out.println("Error al generar el archivo para Visa.");
-        }
+    public void generateOutputFile(String filename) {
+        // This method is intentionally left blank as the Visa output file is generated in the processPayment method.
+    }
+
+    private boolean isValidCard(String cardNumber) {
+        return cardNumber.length() == 16 && cardNumber.startsWith("4");
     }
 }
+
